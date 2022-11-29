@@ -1,0 +1,10 @@
+#ifndef _RES_RESOURCES_H_
+#define _RES_RESOURCES_H_
+
+extern const u8 sfx_laser[2560];
+extern const Image background;
+extern const SpriteDefinition ship;
+extern const SpriteDefinition bullet;
+extern const SpriteDefinition spr_powerup;
+
+#endif // _RES_RESOURCES_H_
