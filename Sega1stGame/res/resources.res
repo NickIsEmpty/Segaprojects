@@ -1,0 +1,1 @@
+SPRITE SoldIdle "WalkAnimations.png" 4 4 FAST 15
