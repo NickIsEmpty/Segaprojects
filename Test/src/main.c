@@ -169,7 +169,6 @@ int i = 0;
 int ticks;
 int delay;
 int enemiesAlive = 0;
-int maisn = 0;
 
 void swapToColor(u16 index, u16 Col, u16 defaultColor)
 {
