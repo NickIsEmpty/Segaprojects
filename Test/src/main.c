@@ -468,6 +468,8 @@ void positionBullets()
                 killEntity(b);
                 swapToColor(e->spriteColor,RGB24_TO_VDPCOLOR(0xaf0a09),e->spriteColor);
                 swapToColor(50,RGB24_TO_VDPCOLOR(0xaf0a09),49);
+                break;
+                
             }
             else
             {
