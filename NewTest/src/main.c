@@ -159,7 +159,7 @@ typedef struct
     char name[6];
 } Entity;
 
-Entity player = {{150, 165}, {0, 0}, 32, 32, 100, 0, 0, 35, FALSE, FALSE, up, NULL, "PLAYER"};
+Entity player = {{150, 165}, {0, 0}, 32, 32, 10, 0, 0, 35, FALSE, FALSE, up, NULL, "PLAYER"};
 Entity xenom[MAX_ENEMIES];
 Entity lizard[MAX_ENEMIES];
 Entity bullet[MAX_BULLETS];
@@ -178,6 +178,11 @@ int i = 0;
 int ticks;
 int delay;
 int enemiesAlive = 0;
+
+char labelTimer[7] = "TIMER:\0";
+char timerStr [4] = "0";
+char timer = 10;
+
 
 
 void showText(char s[])
@@ -457,7 +462,7 @@ void changeHealthBar()
     for(int i = 0; i < player.health/10; i++) 
     {    
         textPosX ++;  
-        VDP_setTextPalette(PAL1);
+        //VDP_setTextPalette(PAL1);
         VDP_drawText("|",textPosX,25);
         //SPR_addSprite(&Health, textPosX, 215, TILE_ATTR(PAL1, 0, FALSE, FALSE));
     } 
@@ -1450,19 +1455,19 @@ void showMainMenu()
 {
     switch (gameON)
     {
-    case FALSE:
-        cursorPos.x = 8;
-        VDP_drawText(">",cursorPos.x,cursorPos.y);
-        VDP_drawText("START",10,10);
-        VDP_drawText("EXIT",10,11);
-        VDP_drawText("Press Start to select!!",10,25);
-        break;
+        case FALSE:
+            cursorPos.x = 8;
+            VDP_drawText(">",cursorPos.x,cursorPos.y);
+            VDP_drawText("START",10,10);
+            VDP_drawText("EXIT",10,11);
+            VDP_drawText("Press Start to select!!",10,25);
+            break;
 
-    case TRUE:
-        break;
-    
-    default:
-        break;
+        case TRUE:
+            break;
+        
+        default:
+            break;
     }
     
     
@@ -1536,6 +1541,48 @@ void isColliding()
     }
 }
 
+void updateTimerDisplay()
+{
+	sprintf(timerStr,"%d",timer);
+	VDP_drawText(timerStr,21,13);
+	//VDP_clearText(15,14,7);
+
+}
+
+void gameOver()
+{
+    int timerTicks;
+
+    if(player.health <=0)
+    {
+        VDP_clearSprites();
+        VDP_drawImage(BG_B, &GameOver, 0, 0);
+        //VDP_clearPlane(BG_A,TRUE);
+        VDP_drawText("GAME OVER",15,12);
+        VDP_drawText(labelTimer,15,13);
+        //updateTimerDisplay();
+        timerTicks++;
+
+        if(ticks == 20 && timer > 0)
+        {
+            timer --;
+            updateTimerDisplay();
+            ticks = 0;
+            
+        }
+        else if(timer <= 0)
+        {
+            timer = 10;
+            reviveEntity(&player,10);
+            VDP_clearPlane(BG_A,TRUE);
+            gameON = FALSE;
+            showMainMenu();
+        }
+        
+        
+        
+    }
+}
 
 void myJoyHandler(u16 joy, u16 changed, u16 state)
 {
@@ -1677,6 +1724,7 @@ int main()
     loadLevel();
     VDP_setTextPlane(BG_A);
 
+
     while (1)
     {
         
@@ -1695,10 +1743,15 @@ int main()
                 
         if(gameIsPaused == 1)
         {
-
+        
         }
 
         showMainMenu();
+
+        if(player.health <= 0)
+        {
+
+        }
         
         if(gameON == TRUE && gameIsPaused == 0)
         {
@@ -1722,6 +1775,7 @@ int main()
             lizPositionBullets();
             
             changeHealthBar();
+            gameOver();
 
             
 

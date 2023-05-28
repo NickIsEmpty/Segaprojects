@@ -7,3 +7,4 @@ SPRITE Lizard "sprites/LIZARD.png" 4 4 FAST 5
 SPRITE Bullet "tiles/imgbullet.bmp" 1 1 FAST 0
 SPRITE LizardBullet "sprites/LizardBullet.png" 1 1 FAST 0
 IMAGE  HPoint "sprites/Health.png" 0
+IMAGE  GameOver "sprites/gameover.png" 0

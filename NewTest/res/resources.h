@@ -10,5 +10,6 @@ extern const SpriteDefinition Lizard;
 extern const SpriteDefinition Bullet;
 extern const SpriteDefinition LizardBullet;
 extern const Image HPoint;
+extern const Image GameOver;
 
 #endif // _RES_RESOURCES_H_
