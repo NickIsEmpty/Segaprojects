@@ -32,7 +32,7 @@
 #define MAP_WIDTH 40
 
 #define MAX_BULLETS 11
-#define MAX_ENEMIES 3
+#define MAX_ENEMIES 7
 
 #define LEVEL_NUM 3
 
@@ -159,7 +159,7 @@ typedef struct
     char name[6];
 } Entity;
 
-Entity player = {{150, 165}, {0, 0}, 32, 32, 10, 0, 0, 35, FALSE, FALSE, up, NULL, "PLAYER"};
+Entity player = {{150, 165}, {0, 0}, 32, 32, 100, 0, 0, 35, FALSE, FALSE, up, NULL, "PLAYER"};
 Entity xenom[MAX_ENEMIES];
 Entity lizard[MAX_ENEMIES];
 Entity bullet[MAX_BULLETS];
@@ -178,11 +178,13 @@ int i = 0;
 int ticks;
 int delay;
 int enemiesAlive = 0;
+int enemiesShouldDie = 15;
 
 char labelTimer[7] = "TIMER:\0";
 char timerStr [4] = "0";
 char timer = 10;
 
+u16 palette_full[64];
 
 
 void showText(char s[])
@@ -641,7 +643,7 @@ void plrShooting(int fireRate)
 
 void xenomSpawner(Entity *e, int enemyCount)
 {
-    enemiesAlive = 0;
+    //enemiesAlive = 0;
     int randX;
     int randY; 
     randX = random()%200;
@@ -914,7 +916,7 @@ void enemyAI(Entity *e)
 
 void lizardSpawner(Entity *e, int enemyCount)
 {
-    enemiesAlive = 0;
+    //enemiesAlive = 0;
     int randX;
     int randY; 
     randX = random()%200;
@@ -1355,14 +1357,13 @@ void startGame()
 
         if(currentLevelIndex == 0)
         VDP_drawImage(BG_B, &LVL, 0, 0);
-    
 
         spawnPlayer();
         spawnBullets();
         spawnLizardBullets();
     
-        xenomSpawner(xenom,3);
-        lizardSpawner(lizard,3);
+        xenomSpawner(xenom,enemiesShouldDie%4);
+        lizardSpawner(lizard,enemiesShouldDie%4);
         SPR_update();
 
 
@@ -1380,9 +1381,6 @@ void clearLevel()
 
 
 
-
-
-
 void loadLevel()
 {
     
@@ -1397,12 +1395,15 @@ void loadLevel()
             {
                 case 0:
                     levelList[i][j] = level1[i][j]; 
+                    enemiesShouldDie = 10;
                     break;
                 case 1:
                     levelList[i][j] = level2[i][j];
+                    enemiesShouldDie = 15;
                     break;
                 case 2:
                     levelList[i][j] = level3[i][j];
+                    enemiesShouldDie = 15;
                     break;
                 
                     default:
@@ -1420,12 +1421,14 @@ void changeLevelIndex()
     {
         exitUnlocked = FALSE;
         currentLevelIndex ++;
+        enemiesAlive = 0;
 
         loadLevel();
         startGame();
-        
-        
-        if(currentLevelIndex == 0 )
+        PAL_fadeIn(0,63, palette_full, 10, FALSE);
+        waitMs(1000); 
+        PAL_fadeOut(0, 63, 10, FALSE);
+        if(currentLevelIndex == 0)
         {
             VDP_clearPlane(BG_B,TRUE);
             VDP_drawImage(BG_B, &LVL, 0, 0);
@@ -1444,8 +1447,8 @@ void changeLevelIndex()
         spawnPlayer();
         spawnBullets();
         spawnLizardBullets();
-        xenomSpawner(xenom,3);
-        lizardSpawner(lizard,3);
+        xenomSpawner(xenom,enemiesShouldDie%4);
+        lizardSpawner(lizard,enemiesShouldDie%4);
         
         
     }
@@ -1514,6 +1517,8 @@ void isColliding()
                             e->dir = death;
                             e--;
                             enemiesAlive--;
+                            enemiesShouldDie--;
+                            
                         }
                         break;
                     }
@@ -1531,6 +1536,7 @@ void isColliding()
                             l->dir = death;
                             l--;
                             enemiesAlive--;
+                            enemiesShouldDie--;
                         }
                         break;
                     }
@@ -1543,10 +1549,9 @@ void isColliding()
 
 void updateTimerDisplay()
 {
+    VDP_clearTextArea(21,13,2,1);
 	sprintf(timerStr,"%d",timer);
 	VDP_drawText(timerStr,21,13);
-	//VDP_clearText(15,14,7);
-
 }
 
 void gameOver()
@@ -1557,18 +1562,15 @@ void gameOver()
     {
         VDP_clearSprites();
         VDP_drawImage(BG_B, &GameOver, 0, 0);
-        //VDP_clearPlane(BG_A,TRUE);
         VDP_drawText("GAME OVER",15,12);
         VDP_drawText(labelTimer,15,13);
-        //updateTimerDisplay();
         timerTicks++;
 
         if(ticks == 20 && timer > 0)
         {
-            timer --;
             updateTimerDisplay();
-            ticks = 0;
-            
+            timer --;
+            ticks = 0;           
         }
         else if(timer <= 0)
         {
@@ -1708,9 +1710,17 @@ void myJoyHandler(u16 joy, u16 changed, u16 state)
                 cursorPos.y++;
             }
         }
-        else
-        {
 
+        if (gameON == TRUE && player.health <=0 && timer>=0)
+        {
+            if(state & BUTTON_START)
+            {
+                 VDP_clearPlane(BG_A, FALSE);
+                 VDP_clearPlane(BG_B, FALSE);
+                 reviveEntity(&player,10);
+                 changeLevelIndex();
+                 startGame();
+            }
         }
     }
 }
@@ -1756,9 +1766,14 @@ int main()
         if(gameON == TRUE && gameIsPaused == 0)
         {
             
-            if (enemiesAlive == 0)
+            if (enemiesShouldDie <= 0)
             {
                 exitUnlocked = TRUE;
+            }
+            else if(enemiesAlive <=1 && enemiesShouldDie > 0)
+            {
+                xenomSpawner(xenom,enemiesShouldDie%2);
+                lizardSpawner(lizard,enemiesShouldDie%2);
             }
            
             
