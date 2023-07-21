@@ -53,24 +53,24 @@ map level1 =
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
+        {0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
@@ -159,6 +159,20 @@ typedef struct
     char name[6];
 } Entity;
 
+// typedef struct {
+//     int x;
+//     int y;
+//     int g; // Cost to move from the start node to this node
+//     int h; // Heuristic cost (estimated distance to the goal)
+//     int f; // Total cost: f = g + h
+//     bool walkable;
+//     Node* parent; // Reference to the previous node in the path
+// } Node;
+
+
+// Create the grid
+// Node grid[MAP_WIDTH][MAP_HEIGHT];
+
 Entity player = {{150, 165}, {0, 0}, 32, 32, 100, 0, 0, 35, FALSE, FALSE, up, NULL, "PLAYER"};
 Entity xenom[MAX_ENEMIES];
 Entity lizard[MAX_ENEMIES];
@@ -184,7 +198,102 @@ char labelTimer[7] = "TIMER:\0";
 char timerStr [4] = "0";
 char timer = 10;
 
+moveDirection randomDir;
+
 u16 palette_full[64];
+
+
+// Function to calculate the heuristic cost (Manhattan distance)
+// int heuristicCost(Node* current, Node* goal) 
+// {
+//     return abs(current->x - goal->x) + abs(current->y - goal->y);
+// }
+
+// Function to find the path using A* algorithm
+// bool findPath(Node* start, Node* goal) 
+// {
+//     // Create two lists: openList and closedList
+//     List openList;
+//     List closedList;
+
+//     // Add the start node to the openList
+//     addToOpenList(start);
+
+//     // Loop until the openList is empty
+//     while (!isEmpty(openList)) 
+//     {
+//         // Find the node with the lowest f cost in the openList
+//         Node* current = findLowestFCost(openList);
+
+//         // Move the current node from openList to closedList
+//         removeFromOpenList(current);
+//         addToClosedList(current);
+
+//         // Check if the goal node is reached
+//         if (current == goal) 
+//         {
+//             return true;
+//         }
+
+//         // Get the neighboring nodes
+//         Node* neighbors[4];
+//         getNeighbors(current, neighbors);
+
+//         // Loop through the neighbors
+//         for (int i = 0; i < 4; i++) 
+//         {
+//             Node* neighbor = neighbors[i];
+
+//             // Skip the neighbor if it's not walkable or already in the closedList
+//             if (!neighbor->walkable || isInClosedList(neighbor)) 
+//             {
+//                 continue;
+//             }
+
+//             // Calculate the tentative g cost
+//             int tentativeG = current->g + 1;
+
+//             // Check if the neighbor is already in the openList
+//             bool inOpenList = isInOpenList(neighbor);
+
+//             if (!inOpenList || tentativeG < neighbor->g) 
+//             {
+//                 // Update the neighbor's values
+//                 neighbor->g = tentativeG;
+//                 neighbor->h = heuristicCost(neighbor, goal);
+//                 neighbor->f = neighbor->g + neighbor->h;
+//                 neighbor->parent = current;
+
+//                 if (!inOpenList) 
+//                 {
+//                     // Add the neighbor to the openList
+//                     addToOpenList(neighbor);
+//                 }
+//             }
+//         }
+//     }
+//     // Path not found
+//     return false;
+// }
+
+// // Function to reconstruct the path from the goal node to the start node
+// void reconstructPath(Node* start, Node* goal) 
+// {
+//     Node* current = goal;
+
+//     // Create a list to store the path
+//     List path;
+//     while (current != start) {
+//         addToPath(path, current);
+//         current = current->parent;
+//     }
+
+//     // Reverse the path
+//     reversePath(path);
+
+//     // Use the path to navigate in your game
+//     // ...
+// }
 
 
 void showText(char s[])
@@ -456,6 +565,29 @@ void movePlayer()
 }
 
 
+void randomDirection()
+{
+    int randDir = random()%4;
+        switch(randDir)
+        {
+            case 0:
+            randomDir = up;
+            break;
+
+            case 1:
+            randomDir = down;
+            break;
+
+            case 2:
+            randomDir = left;
+            break;
+
+            case 3:
+            randomDir = right;
+            break;
+        }
+}
+
 
 void changeHealthBar()
 {
@@ -641,6 +773,10 @@ void plrShooting(int fireRate)
 }
 
 
+
+
+
+
 void xenomSpawner(Entity *e, int enemyCount)
 {
     //enemiesAlive = 0;
@@ -822,9 +958,15 @@ void xenmoState(Entity *e)
 
 void enemyAI(Entity *e)
 {
+
     for (i = 0; i < MAX_ENEMIES; i++)
     {
         e = &xenom[i];
+        
+     if((e->pos.x > player.pos.x - 34 && e->pos.x < player.pos.x + 50) && (e->pos.y > player.pos.y - 34 && e->pos.y < player.pos.y + 50))
+     {
+        
+    
         if (e->pos.y  > player.pos.y + player.h && e->health > 0)
         {    
             e->dir = up;
@@ -882,22 +1024,43 @@ void enemyAI(Entity *e)
         
 
 
-        //  if(e->pos.x + e->w < player.pos.x  && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y + 1, 4, 4, e))
-        // {
-        //         e->dir = downright;
-        // }
-        // else if(e->pos.x > player.pos.x + player.w && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x - 1, e->pos.y + 1, 4, 4, e))
-        // {
-        //         e->dir = downleft;
-        // }
-        // else if(e->pos.x + e->w < player.pos.x && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y - 1, 4, 4, e))
-        // {
-        //         e->dir = upright;
-        // }
-        // else if(e->pos.x > player.pos.x + player.w && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x - 1  , e->pos.y - 1, 4, 4, e))
-        // {
-        //         e->dir = upleft;
-        // }
+         if(e->pos.x + e->w < player.pos.x  && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y + 1, 4, 4, e))
+        {
+                e->dir = downright;
+        }
+        else if(e->pos.x > player.pos.x + player.w && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x - 1, e->pos.y + 1, 4, 4, e))
+        {
+                e->dir = downleft;
+        }
+        else if(e->pos.x + e->w < player.pos.x && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y - 1, 4, 4, e))
+        {
+                e->dir = upright;
+        }
+        else if(e->pos.x > player.pos.x + player.w && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x - 1  , e->pos.y - 1, 4, 4, e))
+        {
+                e->dir = upleft;
+        }
+     }
+    else
+    {
+        randomDirection();
+        if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 && e->dir == up)
+        {
+            e->dir = randomDir;
+        }
+        else if (checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0 && e->dir == down)
+        {
+            e->dir = randomDir;
+        }
+        
+        if (checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 0 && e->dir == left)
+        {
+            e->dir = randomDir;
+        }
+        else if (checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 0 && e->dir == right)
+        {
+            e->dir = randomDir;
+        }
 
         if (collideEntities(e, &player))
         {
@@ -908,6 +1071,10 @@ void enemyAI(Entity *e)
                 player.health -=4;
             }
         }
+
+    }
+
+        
 
     }
 }
@@ -948,6 +1115,9 @@ void lizardSpawner(Entity *e, int enemyCount)
         }   
     }
 }
+
+
+
 
 void spawnLizardBullets()
 {
@@ -1230,121 +1400,142 @@ void enemyAI_LIZ(Entity *e)
     {
         
         e = &lizard[i];
-
-        // if(e->pos.y == player.pos.y)
-        // {
-        //     //e->moving = FALSE;
-        //     if(player.pos.x > e->pos.x )
-        //     {
-        //         e->dir = right;
-        //         if(checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 0)
-        //         {
-        //             e->dir = up;
-        //         }
-        //     }
-        //     else if(player.pos.x < e->pos.x)
-        //     {
-        //        e->dir = left;
-        //        if(checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 0)
-        //         {
-        //             e->dir = up;
-        //         }
-        //     }
-        // }
-
-    
-        if (e->pos.y  > player.pos.y + player.h && e->health > 0)
-        {    
-            e->dir = up;
-            
-            if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 &&  checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 1)
+        randomDirection();
+        if((e->pos.x > player.pos.x - 34 && e->pos.x < player.pos.x + 50) && (e->pos.y > player.pos.y - 34 && e->pos.y < player.pos.y + 50))
+        {
+            if(e->pos.y == player.pos.y)
             {
+                //e->moving = FALSE;
+                if(player.pos.x > e->pos.x )
+                {
+                    e->dir = right;
+                    if(checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 0)
+                    {
+                        e->dir = up;
+                    }
+                }
+                else if(player.pos.x < e->pos.x)
+                {
                 e->dir = left;
+                if(checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 0)
+                    {
+                        e->dir = up;
+                    }
+                }
             }
-            else if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 &&  checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 1 )
-            {
+
+        
+            if (e->pos.y  > player.pos.y + player.h && e->health > 0)
+            {    
+                e->dir = up;
+                
+                if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 &&  checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 1)
+                {
+                    e->dir = left;
+                }
+                else if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 &&  checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 1 )
+                {
+                    e->dir = right;
+                }
+
+            }
+            else if (e->pos.y + e->h < player.pos.y  && e->health > 0 )
+            {    
+                e->dir = down;
+
+                if(checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0  && checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 1)
+                {
+                    e->dir = left;
+                }
+                else if(checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0 && player.pos.x > e->pos.x && checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 1)
+                {
+                    e->dir = right;
+                }  
+            }
+            else if (e->pos.x + e->w < player.pos.x && e->health > 0 && e->health > 0)
+            {      
                 e->dir = right;
+
+                if(checkCollisions(e->pos.x + 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y < e->pos.y && checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 1)
+                {
+                    e->dir = up;
+                }
+                else if(checkCollisions(e->pos.x + 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y > e->pos.y && checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 1)
+                {
+                    e->dir = down;
+                }
             }
-
-        }
-        else if (e->pos.y + e->h < player.pos.y  && e->health > 0 )
-        {    
-            e->dir = down;
-
-            if(checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0  && checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 1)
-            {
+            else if (e->pos.x > player.pos.x + player.w && e->health > 0 && e->health > 0)
+            { 
                 e->dir = left;
-            }
-            else if(checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0 && player.pos.x > e->pos.x && checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 1)
-            {
-                 e->dir = right;
-            }  
-        }
-        else if (e->pos.x + e->w < player.pos.x && e->health > 0 && e->health > 0)
-        {      
-            e->dir = right;
 
-            if(checkCollisions(e->pos.x + 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y < e->pos.y && checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 1)
-            {
-                e->dir = up;
+                if(checkCollisions(e->pos.x - 4, e->pos.y, 4,4 ,e) == 0   && checkCollisions(e->pos.x  , e->pos.y - 4, 4,4 ,e) == 1)
+                {
+                    e->dir = up;
+                }
+                else if(checkCollisions(e->pos.x - 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y > e->pos.y && checkCollisions(e->pos.x  , e->pos.y + 4, 4,4 ,e) == 1)
+                {
+                    e->dir = down;
+                }
             }
-            else if(checkCollisions(e->pos.x + 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y > e->pos.y && checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 1)
+
+            
+            if(e->pos.x + e->w < player.pos.x  && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y + 1, 4, 4, e))
             {
-                e->dir = down;
+                    e->dir = downright;
+            }
+            else if(e->pos.x > player.pos.x + player.w && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x - 1, e->pos.y + 1, 4, 4, e))
+            {
+                    e->dir = downleft;
+            }
+            else if(e->pos.x + e->w < player.pos.x && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y - 1, 4, 4, e))
+            {
+                    e->dir = upright;
+            }
+            else if(e->pos.x > player.pos.x + player.w && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x - 1  , e->pos.y - 1, 4, 4, e))
+            {
+                    e->dir = upleft;
+            }
+
+            if(ticks % 60 == 0 && e->health > 0)
+            {
+                lizShootBullet(lizard[i]);
             }
         }
-        else if (e->pos.x > player.pos.x + player.w && e->health > 0 && e->health > 0)
-        { 
-            e->dir = left;
-
-            if(checkCollisions(e->pos.x - 4, e->pos.y, 4,4 ,e) == 0   && checkCollisions(e->pos.x  , e->pos.y - 4, 4,4 ,e) == 1)
-            {
-                e->dir = up;
-            }
-            else if(checkCollisions(e->pos.x - 4, e->pos.y, 4,4 ,e) == 0 && player.pos.y > e->pos.y && checkCollisions(e->pos.x  , e->pos.y + 4, 4,4 ,e) == 1)
-            {
-                e->dir = down;
-            }
+    else
+    {
+        if(checkCollisions(e->pos.x , e->pos.y - 4, 4,4 ,e) == 0 && e->dir == up)
+        {
+            
+            e->dir = randomDir;
         }
-
+        else if (checkCollisions(e->pos.x , e->pos.y + 4, 4,4 ,e) == 0 && e->dir == down)
+        {
+            e->dir = randomDir;
+        }
         
-        //  if(e->pos.x + e->w < player.pos.x  && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y + 1, 4, 4, e))
-        // {
-        //         e->dir = downright;
-        // }
-        // else if(e->pos.x > player.pos.x + player.w && e->pos.y + e->h < player.pos.y && e->health > 0 &&  checkCollisions(e->pos.x - 1, e->pos.y + 1, 4, 4, e))
-        // {
-        //         e->dir = downleft;
-        // }
-        // else if(e->pos.x + e->w < player.pos.x && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x + 1 , e->pos.y - 1, 4, 4, e))
-        // {
-        //         e->dir = upright;
-        // }
-        // else if(e->pos.x > player.pos.x + player.w && e->pos.y > player.pos.y + player.h && e->health > 0 &&  checkCollisions(e->pos.x - 1  , e->pos.y - 1, 4, 4, e))
-        // {
-        //         e->dir = upleft;
-        // }
-
+        if (checkCollisions(e->pos.x - 4 , e->pos.y, 4,4 ,e) == 0 && e->dir == left)
+        {
+            e->dir = randomDir;
+        }
+        else if (checkCollisions(e->pos.x + 4 , e->pos.y, 4,4 ,e) == 0 && e->dir == right)
+        {
+            e->dir = randomDir;
+        }
+    }
         
-
         if (collideEntities(e, &player))
         {
             e->vel.x = 0;
             e->vel.y = 0;
         } 
 
-        if(player.pos.x <= e->pos.x + 50 && player.pos.x >= e->pos.x - 50 && player.pos.y <= e->pos.y + 50 && player.pos.y >= e->pos.y - 50)
-        {
-            if(ticks % 60 == 0 && e->health > 0)
-            {
-                lizShootBullet(lizard[i]);
-            }
-        }
-
+        // if(player.pos.x <= e->pos.x + 50 && player.pos.x >= e->pos.x - 50 && player.pos.y <= e->pos.y + 50 && player.pos.y >= e->pos.y - 50)
+        // {
+            
+        // }
     }
 }
-
-
 
 
 
@@ -1362,8 +1553,8 @@ void startGame()
         spawnBullets();
         spawnLizardBullets();
     
-        xenomSpawner(xenom,enemiesShouldDie%4);
-        lizardSpawner(lizard,enemiesShouldDie%4);
+        xenomSpawner(xenom,3);
+        lizardSpawner(lizard,3);
         SPR_update();
 
 
@@ -1380,7 +1571,6 @@ void clearLevel()
 }
 
 
-
 void loadLevel()
 {
     
@@ -1395,15 +1585,15 @@ void loadLevel()
             {
                 case 0:
                     levelList[i][j] = level1[i][j]; 
-                    enemiesShouldDie = 10;
+                    enemiesShouldDie = 5;
                     break;
                 case 1:
                     levelList[i][j] = level2[i][j];
-                    enemiesShouldDie = 15;
+                    enemiesShouldDie = 5;
                     break;
                 case 2:
                     levelList[i][j] = level3[i][j];
-                    enemiesShouldDie = 15;
+                    enemiesShouldDie = 5;
                     break;
                 
                     default:
@@ -1447,8 +1637,8 @@ void changeLevelIndex()
         spawnPlayer();
         spawnBullets();
         spawnLizardBullets();
-        xenomSpawner(xenom,enemiesShouldDie%4);
-        lizardSpawner(lizard,enemiesShouldDie%4);
+        xenomSpawner(xenom,3);
+        lizardSpawner(lizard,3);
         
         
     }
@@ -1746,7 +1936,6 @@ int main()
         ticks++;
         if (ticks == 60)
         {
-    
             VDP_clearPlane(BG_A,FALSE);
             ticks = 0;
         }
@@ -1770,11 +1959,11 @@ int main()
             {
                 exitUnlocked = TRUE;
             }
-            else if(enemiesAlive <=1 && enemiesShouldDie > 0)
-            {
-                xenomSpawner(xenom,enemiesShouldDie%2);
-                lizardSpawner(lizard,enemiesShouldDie%2);
-            }
+            // else if(enemiesAlive <=1 && enemiesShouldDie > 0)
+            // {
+            //     xenomSpawner(xenom,enemiesShouldDie%2);
+            //     lizardSpawner(lizard,enemiesShouldDie%2);
+            // }
            
             
             xenmoState(xenom);
