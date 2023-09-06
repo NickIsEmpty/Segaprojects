@@ -1,0 +1,10 @@
+#ifndef _RES_RESOURCES_H_
+#define _RES_RESOURCES_H_
+
+extern const SpriteDefinition Hugo1;
+extern const Image Lvl1BG2;
+extern const SpriteDefinition Obstacle1;
+extern const SpriteDefinition HugoPoint1;
+extern const SpriteDefinition PointTree;
+
+#endif // _RES_RESOURCES_H_
