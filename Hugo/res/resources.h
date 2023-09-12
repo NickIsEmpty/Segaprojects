@@ -2,6 +2,7 @@
 #define _RES_RESOURCES_H_
 
 extern const SpriteDefinition Hugo1;
+extern const Image Lvl1BG1;
 extern const Image Lvl1BG2;
 extern const SpriteDefinition Obstacle1;
 extern const SpriteDefinition HugoPoint1;

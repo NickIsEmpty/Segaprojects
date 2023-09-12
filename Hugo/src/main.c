@@ -57,7 +57,8 @@ int score = 0;
 char labelScore[7] = "SCORE:\0";
 char strScore[4] = "0";
 
-Image Lvl1Bg2;
+u16 ind = TILE_USER_INDEX;
+
 
 void showText(char s[])						
 {											 
@@ -66,10 +67,10 @@ void showText(char s[])
 
 void updateInterface()
 {
-	VDP_clearText(7,2,3); 	
+	VDP_clearText(30,25,3); 	
 	sprintf(strScore,"%d",score); 
-    VDP_drawText(labelScore,1,2);
-	VDP_drawText(strScore,7,2);
+    //VDP_drawText(labelScore,1,2);
+	VDP_drawText(strScore,30,25);
 }
 
 void killEntity(Entity *e)
@@ -109,8 +110,8 @@ void RefreshMainMenu()
 void spawnPlayer()
 {
     SPR_init();
-    player.sprite = SPR_addSprite(&Hugo1, player.pos.x, player.pos.y, TILE_ATTR(PAL1, 0,FALSE, FALSE));
-    PAL_setPalette(PAL1,Hugo1.palette->data,DMA);
+    PAL_setPalette(PAL3,Hugo1.palette->data,DMA);
+    player.sprite = SPR_addSprite(&Hugo1, player.pos.x, player.pos.y, TILE_ATTR(PAL3, 0,FALSE, FALSE));
     SPR_update();
 }
 
@@ -170,8 +171,14 @@ void hugoPoints(Entity *e, Entity *b)
 
 void StartGame()
 {
-    // PAL_setPalette(PAL0,Lvl1BG2.palette->data,DMA);
-    // VDP_drawImageEx(BG_B,&Lvl1BG2,TILE_ATTR_FULL(PAL0,FALSE,FALSE,FALSE,TILE_USER_INDEX),0 ,0,FALSE,TRUE);
+    PAL_setPalette(PAL0,Lvl1BG2.palette->data,DMA);
+    VDP_drawImageEx(BG_B,&Lvl1BG2,TILE_ATTR_FULL(PAL0,FALSE,FALSE,FALSE,ind),0 ,0,FALSE,TRUE);
+    ind+= Lvl1BG2.tileset->numTile;
+    
+    PAL_setPalette(PAL1,Lvl1BG1.palette->data,DMA);
+    VDP_drawImageEx(BG_A,&Lvl1BG1,TILE_ATTR_FULL(PAL1,FALSE,FALSE,FALSE,ind),0 ,0,FALSE,TRUE);
+    ind+= Lvl1BG1.tileset->numTile;
+
     spawnPlayer();
     ObstaclesSpawner(manhole);
     hugoPoints(hugoPoint, pointTree);
@@ -323,8 +330,9 @@ void myJoyHandler(u16 joy, u16 changed, u16 state)
                         RefreshMainMenu();
                         //loadLevel();
                         gameON = TRUE;
-                        StartGame();
                         VDP_clearPlane(BG_A,FALSE);
+                        StartGame();
+                        updateInterface();
                         break;
                     case 11:
                     
@@ -372,6 +380,7 @@ int main()
 {
     JOY_init();
     JOY_setEventHandler(myJoyHandler);
+
     
     SPR_setFrameChangeCallback(player.sprite,playerAnimator);
 	cursorPos.y = 10;
