@@ -1,0 +1,1 @@
+SPRITE  Lvl1BG1 "Lvl1BG1.png" 4 4 FAST 1
