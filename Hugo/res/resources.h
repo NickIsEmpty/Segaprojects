@@ -7,6 +7,7 @@ extern const Image Lvl1BG2;
 extern const SpriteDefinition Manhole;
 extern const SpriteDefinition HugoPoint1;
 extern const SpriteDefinition PointTree;
+extern const SpriteDefinition PointTree2;
 extern const SpriteDefinition Rock;
 extern const SpriteDefinition Trap;
 

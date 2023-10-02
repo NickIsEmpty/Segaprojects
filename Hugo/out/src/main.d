@@ -1,38 +1,16 @@
-out/src/main.o: src/main.c C:/Users/Goncharov/Desktop/Sgdk/inc/genesis.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/types.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/config.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/asm.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/sys.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/sram.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/mapper.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/memory.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/memory_base.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/tools.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/bmp.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/maths.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/vdp.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/pal.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/dma.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/vdp_tile.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/vdp_bg.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/map.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/pool.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/object.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/font.h \
- C:/Users/Goncharov/Desktop/Sgdk/res/libres.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/string.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/tab_cnv.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/maths3D.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/vdp_spr.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/vram.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/sprite_eng.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/sound.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/xgm.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/z80_ctrl.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/ym2612.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/psg.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/joy.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/timer.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/task.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/task_cst.h res/resources.h \
- C:/Users/Goncharov/Desktop/Sgdk/inc/string.h
+out/src/main.o: src/main.c D:/SGDK/inc/genesis.h D:/SGDK/inc/types.h \
+ D:/SGDK/inc/config.h D:/SGDK/inc/asm.h D:/SGDK/inc/sys.h \
+ D:/SGDK/inc/sram.h D:/SGDK/inc/mapper.h D:/SGDK/inc/memory.h \
+ D:/SGDK/inc/memory_base.h D:/SGDK/inc/tools.h D:/SGDK/inc/bmp.h \
+ D:/SGDK/inc/maths.h D:/SGDK/inc/vdp.h D:/SGDK/inc/pal.h \
+ D:/SGDK/inc/dma.h D:/SGDK/inc/vdp_tile.h D:/SGDK/inc/vdp_bg.h \
+ D:/SGDK/inc/map.h D:/SGDK/inc/pool.h D:/SGDK/inc/object.h \
+ D:/SGDK/inc/font.h D:/SGDK/res/libres.h D:/SGDK/inc/string.h \
+ D:/SGDK/inc/tab_cnv.h D:/SGDK/inc/maths3D.h D:/SGDK/inc/vdp_spr.h \
+ D:/SGDK/inc/vdp_pal.h D:/SGDK/inc/vram.h D:/SGDK/inc/sprite_eng.h \
+ D:/SGDK/inc/sprite_eng_legacy.h D:/SGDK/inc/sound.h D:/SGDK/inc/xgm.h \
+ D:/SGDK/inc/z80_ctrl.h D:/SGDK/inc/ym2612.h D:/SGDK/inc/psg.h \
+ D:/SGDK/inc/joy.h D:/SGDK/inc/timer.h D:/SGDK/inc/task.h \
+ D:/SGDK/inc/task_cst.h D:/SGDK/inc/ext/flash-save/flash.h \
+ D:/SGDK/inc/types.h D:/SGDK/inc/ext/flash-save/saveman.h res/resources.h \
+ D:/SGDK/inc/string.h

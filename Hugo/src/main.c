@@ -1,6 +1,6 @@
 #include <genesis.h>
 #include <resources.h> 	
-#include <string.h>		
+#include<string.h>	
 
 #define WALKRIGHT 0
 #define CROUCH 1
@@ -48,13 +48,15 @@ Point cursorPos;
 Entity player = {{10, 90}, {0, 0}, 50, 75, 100, 0, 0, walk, NULL, TRUE,0};
 Entity mAnhole[MAX_OBSTACLES];
 Entity hugoPoint[MAX_POINTS];
-Entity pointTree[MAX_POINT_TREE];
 
-Obstacle manhole={{240,90},{2,0},56,16,-1,0,NULL};
-Obstacle rock={{240,90},{2,0},48,48,-1,0,NULL};
-Obstacle trap={{240,90},{2,0},48,24,-1,0,NULL};
+Obstacle manhole = {{240,90},{2,0},56,16,-1,0,NULL};
+Obstacle rock = {{240,90},{2,0},48,48,-1,0,NULL};
+Obstacle trap = {{240,90},{2,0},48,24,-1,0,NULL};
+Obstacle pointTree = {{240,0},{2,0},40,40,-1,0,NULL};
+Obstacle pointTree2 = {{240,0},{2,0},40,80,-1,0,NULL};
 
-Obstacle obstacleArray[3];
+
+Obstacle obstacleArray[5];
 
 int i = 0;
 int j = 0;
@@ -76,10 +78,10 @@ void spawnObstacles()
     
     if(tick % 120 == 0)
     {
-        randObstacle = random()% 3;
+        randObstacle = random()% 5;
         e = &obstacleArray[randObstacle];
         e->pos.y = ground + x;
-         e->pos.x = 260;
+        e->pos.x = 260;
         e->vel.x = 2;
         e->vel.y = 1;
         e->dirIntX = -1;
@@ -114,14 +116,27 @@ void spawnObstacles()
                 e->sprite = SPR_addSprite(&Trap, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
                 PAL_setPalette(PAL2, Trap.palette->data, DMA);
                 break;
+
+            case 3:
+                e->w = 40;
+                e->h = 40;
+                e->pos.y = 0;
+                e->sprite = SPR_addSprite(&PointTree, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
+                PAL_setPalette(PAL2, PointTree.palette->data, DMA);
+                break;
+
+            case 4:
+                e->w = 40;
+                e->h = 80;
+                e->pos.y = 0;
+                e->sprite = SPR_addSprite(&PointTree2, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
+                PAL_setPalette(PAL2, PointTree2.palette->data, DMA);
+                break;
             
             default:
-            randObstacle = random()% 3;
+            randObstacle = random()% 5;
                 break;
-        }
-        
-       
-            
+        }       
     }
     
     e->pos.x += e->vel.x * e->dirIntX;  
@@ -193,60 +208,6 @@ void spawnPlayer()
     SPR_update();
 }
 
-void ObstaclesSpawner(Entity *e)
-{
-    for (i = 0; i < MAX_OBSTACLES; i++)
-    {
-        e = &mAnhole[i];
-        e->pos.x = 320 + i*150;
-        e->w = 56;
-        e->h = 16;
-        e->pos.y = 170 - e->h*2;
-        e->health = 1;
-        e->dirIntX = -1;
-        e->dirIntY = 0;
-        e->dir = walk;
-        e->sprite = SPR_addSprite(&Manhole, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
-        PAL_setPalette(PAL2, Manhole.palette->data, DMA);
-        e++;
-        SPR_setAnimAndFrame(e->sprite,0,0);
-    }
-}
-
-void hugoPoints(Entity *e, Entity *b)
-{
-    for (i = 0; i < MAX_POINTS; i++)
-    {
-        e = &hugoPoint[i];
-        e->pos.x = 320 + i*100;
-        e->w = 32;
-        e->h = 48;
-        e->pos.y = 40;
-        e->health = 1;
-        e->dirIntX = -1;
-        e->dirIntY = 0;
-        e->dir = walk;
-        e->sprite = SPR_addSprite(&HugoPoint1, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
-        PAL_setPalette(PAL2, HugoPoint1.palette->data, DMA);
-        e++;
-        
-    }
-    for (j = 0; j < MAX_POINTS; j++)
-    {
-        b = &pointTree[j];
-        b->pos.x = 320 + j*100;
-        b->w = 40;
-        b->h = 40;
-        b->pos.y = 0;
-        b->health = 1;
-        b->dirIntX = 0;
-        b->dirIntY = 0;
-        b->dir = walk;
-        b->sprite = SPR_addSprite(&PointTree, b->pos.x, b->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
-        PAL_setPalette(PAL2, PointTree.palette->data, DMA);
-        b++;
-    }
-}
 
 void StartGame()
 {
@@ -317,78 +278,9 @@ void playerAnimator()
     
 }
 
-void movePoints(Entity *e)
-{
-    for(i = 0; i < MAX_POINTS; i++)
-    {
-        e = &hugoPoint[i];
-        e->vel.x = 2;
-        e->dirIntX = -1;
-        e->pos.x += e->vel.x * e->dirIntX; 
 
-        if(e->pos.x <= 0)
-        {
-            killEntity(e);
-            e->vel.x = 2;
-            e->dirIntX = 0;
-        }
 
-        if(collideEntities(&player,e) && e->health > 0)
-        {
-            killEntity(e);
-            score += 10;
-        }
-        SPR_setPosition(e->sprite,e->pos.x,e->pos.y);
-    }
-}
 
-void moveObstacle(Entity *e, Entity *b)
-{
-    for(i = 0; i < MAX_OBSTACLES; i++)
-    {
-
-        e = &mAnhole[i];
-        e->vel.x = 2;
-        e->dirIntX = -1;
-        e->pos.x += e->vel.x * e->dirIntX;
-        SPR_setPosition(e->sprite,e->pos.x,e->pos.y);
-        if(e->pos.x <= 0)
-        {
-            killEntity(e);
-            e->vel.x = 2;
-            e->dirIntX = 0;
-        }
-
-         
-        if(collideEntities(&player,e))
-        {
-            //SPR_setAnim(e->sprite,0);
-        } 
-        else
-        {
-            //SPR_setFrame(e->sprite,0);
-        }
-    } 
-    for (j = 0; j < MAX_POINTS; j++)
-    {
-        b = &pointTree[j];
-        b->vel.x = 2;
-        b->dirIntX = -1;
-        b->pos.x += b->vel.x * b->dirIntX;
-        SPR_setPosition(b->sprite,b->pos.x,b->pos.y);
-        if(b->pos.x <= 0)
-        {
-            killEntity(b);
-            b->vel.x = 2;
-            b->dirIntX = 0;
-        }
-
-        if(collideEntities(&player,b))
-        {
-            killEntity(b);
-        }
-    } 
-}
 
 void myJoyHandler(u16 joy, u16 changed, u16 state)
 {
@@ -464,16 +356,14 @@ int main()
     obstacleArray[0] = manhole;
     obstacleArray[1] = rock;
     obstacleArray[2] = trap;
+    obstacleArray[3] = pointTree;
+    obstacleArray[4] = pointTree2;
 
     while(1)
     {
         if(gameON == TRUE)
         {
             tick++;
-            // if(tick >= 1200)
-            // {
-            //     tick = 0;
-            // }
             playerAnimator();
             spawnObstacles();
             //moveObstacle(manhole, pointTree);

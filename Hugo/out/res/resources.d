@@ -1,9 +1,10 @@
 out/res/resources.o: res/resources.res \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/HugoPoints.bmp \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/trap.png \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/Hugo1LevelAnim.png \
-C:/Users/Goncharov/Desktop/Hugo/res/images/L1up2d.png \
-C:/Users/Goncharov/Desktop/Hugo/res/images/lvl1BG2.png \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/rock-Sheet.png \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/PointTree.png \
-C:/Users/Goncharov/Desktop/Hugo/res/sprites/trap2.png
+D:/Hugo/res/sprites/trap2.png \
+D:/Hugo/res/sprites/PointTree2.png \
+D:/Hugo/res/sprites/rock-Sheet.png \
+D:/Hugo/res/sprites/PointTree.png \
+D:/Hugo/res/images/L1up2d.png \
+D:/Hugo/res/sprites/HugoPoints.bmp \
+D:/Hugo/res/images/lvl1BG2.png \
+D:/Hugo/res/sprites/Hugo1LevelAnim.png \
+D:/Hugo/res/sprites/trap.png
