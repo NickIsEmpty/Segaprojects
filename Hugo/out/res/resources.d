@@ -1,10 +1,10 @@
 out/res/resources.o: res/resources.res \
-D:/Hugo/res/sprites/trap2.png \
-D:/Hugo/res/sprites/PointTree2.png \
-D:/Hugo/res/sprites/rock-Sheet.png \
-D:/Hugo/res/sprites/PointTree.png \
-D:/Hugo/res/images/L1up2d.png \
-D:/Hugo/res/sprites/HugoPoints.bmp \
-D:/Hugo/res/images/lvl1BG2.png \
-D:/Hugo/res/sprites/Hugo1LevelAnim.png \
-D:/Hugo/res/sprites/trap.png
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/Hugo1LevelAnim.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/trap.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/rock-Sheet.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/images/lvl1BG2.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/PointTree2.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/HugoPoints.bmp \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/images/L1up2d.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/trap2.png \
+C:/Users/stani/OneDrive/Рабочий\ стол/SEGA_VSCode_Template-master/res/sprites/PointTree.png
