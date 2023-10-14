@@ -40,26 +40,26 @@ typedef struct
     int h;
     int dirIntX;
     int dirIntY;
+    int health;
     Sprite *sprite;
 } Obstacle;
 
 Point cursorPos;
 
 Entity player = {{10, 90}, {0, 0}, 50, 75, 100, 0, 0, walk, NULL, TRUE,0};
-Entity mAnhole[MAX_OBSTACLES];
-Entity hugoPoint[MAX_POINTS];
 
-Obstacle manhole = {{240,90},{2,0},56,16,-1,0,NULL};
-Obstacle rock = {{240,90},{2,0},48,48,-1,0,NULL};
-Obstacle trap = {{240,90},{2,0},48,24,-1,0,NULL};
-Obstacle pointTree = {{240,0},{2,0},40,40,-1,0,NULL};
-Obstacle pointTree2 = {{320,0},{2,0},40,80,-1,0,NULL};
-
-Obstacle maNhole[5];
-
+Obstacle manhole = {{240,90},{2,0},56,16,-1,0,1,NULL};
+Obstacle rock = {{240,90},{2,0},48,48,-1,0,1,NULL};
+Obstacle trap = {{240,90},{2,0},48,24,-1,0,1,NULL};
+Obstacle pointTree = {{240,0},{2,0},40,40,-1,0,1,NULL};
+Obstacle pointTree2 = {{320,0},{2,0},40,80,-1,0,1,NULL};
 
 Obstacle obstacleArray[5];
 Obstacle obstacles[MAX_OBSTACLES];
+
+Obstacle pointsArray[1];
+Obstacle points[1];
+
 
 
 int i = 0;
@@ -67,6 +67,7 @@ int j = 0;
 int score = 0;
 int tick = 0;
 int obstaclesOnScreen = 0;
+int pointsOnScreen = 0;
 
 char labelScore[7] = "SCORE:\0";
 char strScore[4] = "0";
@@ -84,12 +85,12 @@ void spawnObstacles()
     {
         for( i = 0; i< MAX_OBSTACLES; i++)
         {
-            randObstacle = random()% 5;
+            randObstacle = random()% 3;
             obstacles[i] = obstacleArray[randObstacle];
             e = &obstacles[i];
             e->pos.y = ground + x;
             e->pos.x = 320;
-            e->vel.x = 1;
+            e->vel.x = 2;
             e->vel.y = 1;
             e->dirIntX = -1;
             e->dirIntY = 0;
@@ -122,25 +123,8 @@ void spawnObstacles()
                     e->sprite = SPR_addSprite(&Trap, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
                     PAL_setPalette(PAL2, Trap.palette->data, DMA);
                     break;
-
-                case 3:
-                    e->w = 40;
-                    e->h = 40;
-                    e->pos.y = 0;
-                    e->sprite = SPR_addSprite(&PointTree, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
-                    PAL_setPalette(PAL2, PointTree.palette->data, DMA);
-                    break;
-
-                case 4:
-                    e->w = 40;
-                    e->h = 80;
-                    e->pos.y = 0;
-                    e->sprite = SPR_addSprite(&PointTree2, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
-                    PAL_setPalette(PAL2, PointTree2.palette->data, DMA);
-                    break;
-                
                 default:
-                randObstacle = random()% 5;
+                randObstacle = random()% 3;
                     break;
             }   
             obstaclesOnScreen++;  
@@ -150,14 +134,60 @@ void spawnObstacles()
     }
 }
 
-void moveObstacles()
+void spawnPoints()
+{
+    int randPoints = 0;
+    Obstacle* e;
+    if(pointsOnScreen <= 0)
+    {
+        for( i = 0; i< MAX_OBSTACLES; i++)
+        {
+            randPoints = random()% 2;  
+            points[i] = pointsArray[randPoints];
+            e = &pointsArray[0];
+            e->pos.y = 0;
+            e->pos.x = 340;
+            e->vel.x = 2;
+            e->vel.y = 1;
+            e->dirIntX = -1;
+            e->dirIntY = 0;
+            e->health = 1;
+            
+            switch (randPoints)
+            {
+                
+                case 0:
+                    e->w = 40;
+                    e->h = 0;
+                    e->pos.y = 0;
+                    e->sprite = SPR_addSprite(&PointTree, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
+                    PAL_setPalette(PAL2, PointTree.palette->data, DMA);
+                    break;
+
+                case 1:
+                    e->w = 40;
+                    e->h = 88;
+                    e->pos.y = 0;
+                    e->sprite = SPR_addSprite(&PointTree2, e->pos.x, e->pos.y, TILE_ATTR(PAL2, 0, FALSE, FALSE));
+                    PAL_setPalette(PAL2, PointTree2.palette->data, DMA);
+                    break;
+                
+                default:
+                randPoints = random()% 2;
+                    break;
+            }   
+            pointsOnScreen++;
+        }
+    }
+}
+
+void movePoints()
 {
     Obstacle* e;
-    int current = 0;
-    for(int i = 0 ; i < MAX_OBSTACLES; i++)
-    {
-       
-        e = &obstacles[i];
+
+    for( i = 0; i< MAX_OBSTACLES; i++)
+    {  
+        e = &pointsArray[i];
         e->pos.x += e->vel.x * e->dirIntX;
         SPR_setPosition(e->sprite,e->pos.x,e->pos.y);
         
@@ -165,12 +195,20 @@ void moveObstacles()
         {
             SPR_setVisibility(e->sprite, HIDDEN);
             SPR_releaseSprite(e->sprite);
-            obstaclesOnScreen--;
+            e->health = 0;
+            pointsOnScreen--;
         }
         
-        if(obstaclesOnScreen <= 0)
+        if(pointsOnScreen <= 0)
         {
-            obstaclesOnScreen = 0;
+            pointsOnScreen = 0;
+        }
+
+        if(collideEntities(&player,e) && e->health > 0)
+        {
+            SPR_setVisibility(e->sprite,HIDDEN);
+            e->health = 0;
+            score+=10;
         }
     }
 
@@ -199,9 +237,41 @@ void killEntity(Entity *e)
     SPR_releaseSprite(e->sprite);
 }
 
-int collideEntities(Entity *a, Entity *b)
+int collideEntities(Entity *a, Obstacle *b)
 {
     return (a->pos.x <= b->pos.x + b->w && a->pos.x + a->w >= b->pos.x && a->pos.y <= b->pos.y + b->h && a->pos.y + a->h >= b->pos.y);
+}
+
+void moveObstacles()
+{
+    Obstacle* e;
+    int current = 0;
+    for(int i = 0 ; i < MAX_OBSTACLES; i++)
+    {
+       
+        e = &obstacles[i];
+        e->pos.x += e->vel.x * e->dirIntX;
+        SPR_setPosition(e->sprite,e->pos.x,e->pos.y);
+        
+        if(e->pos.x <= 0)
+        {
+            SPR_setVisibility(e->sprite, HIDDEN);
+            SPR_releaseSprite(e->sprite);
+            obstaclesOnScreen--;
+        }
+        
+        if(obstaclesOnScreen <= 0)
+        {
+            obstaclesOnScreen = 0;
+        }
+
+        // if(collideEntities(&player,e) && e == &pointTree2)
+        // {
+        //     SPR_setVisibility(e->sprite,HIDDEN);
+        //     score+=10;
+        // }
+    }
+
 }
 
 void RefreshMainMenu()
@@ -384,8 +454,10 @@ int main()
     obstacleArray[1] = rock;
     obstacleArray[2] = trap;
     obstacleArray[3] = pointTree;
-    obstacleArray[4] = pointTree2;
+    
 
+    pointsArray[0] = pointTree;
+    pointsArray[1] = pointTree2;
     while(1)
     {
         if(gameON == TRUE)
@@ -394,6 +466,8 @@ int main()
             playerAnimator();
             spawnObstacles();
             moveObstacles();
+            spawnPoints();
+            movePoints();
             //moveObstacle(manhole, pointTree);
             //movePoints(hugoPoint);
             updateInterface();
